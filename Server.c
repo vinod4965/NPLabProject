@@ -9,7 +9,6 @@ FILE *fp;
 char *filename = outputFile;
 char buffer[SIZE];
 fp = fopen(filename, "a");
-6 | P a g e
 printf("\n Data sent to created output file is: ");
 while (1) {
 n = recv(sockfd, buffer, SIZE, 0);
@@ -36,8 +35,7 @@ char buffer[SIZE];
 sockfd = socket(AF_INET, SOCK_STREAM, 0);
 if(sockfd < 0) {
 perror("Error in socket");
-exit(1);
-7 | P a g e
+exit(1)
 }
 printf("Server socket created successfully.\n");
 server_addr.sin_family = AF_INET;
@@ -65,7 +63,6 @@ if ( (childpid = fork ()) == 0 ) {
 printf ("\n\nChild created for dealing with client %d request",k);
 //close listening socket
 close (listenfd);
-8 | P a g e
 write_file(new_sock,argv[1]);
 printf("\nData written in the file successfully.\n");
 }
