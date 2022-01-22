@@ -17,7 +17,6 @@ bzero(data, SIZE);
 int main(int argc, char** argv){
 char *ip = "127.0.0.1";
 int port = 8080;
-9 | P a g e
 int e;
 int sockfd;
 struct sockaddr_in server_addr;
@@ -45,7 +44,6 @@ exit(1);
 send_file(fp, sockfd);
 printf("File data sent successfully.\n");
 printf("Closing the connection.\n");
-10 | P a g e
 close(sockfd);
 return 0;
 }
